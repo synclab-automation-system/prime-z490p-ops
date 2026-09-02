@@ -1,0 +1,23 @@
+# Windows and editor artifacts
+Thumbs.db
+Desktop.ini
+*.tmp
+*.bak
+*.swp
+*.log
+
+# Diagnostics that may contain sensitive machine data
+*.dmp
+*.etl
+*.evtx
+*.pcap
+*.pcapng
+
+# Credentials and local environment
+.env
+.env.*
+!.env.example
+*.key
+*.pfx
+*.p12
+secrets/

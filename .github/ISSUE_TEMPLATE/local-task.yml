@@ -1,0 +1,70 @@
+name: Local PC task
+description: Plan and track a change, investigation, or maintenance task on this workstation.
+title: "[PC] "
+labels:
+  - "status:triage"
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Windows
+        - Power and firmware
+        - Network
+        - Hardware
+        - Applications
+        - Security
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Change risk
+      description: Select Read-only for investigations that do not alter configuration.
+      options:
+        - Read-only
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal and current evidence
+      description: State the desired outcome and include the evidence already collected.
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: Planned steps
+      description: List commands or actions, including safety checks before important changes.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Define the observable checks required to close this task.
+    validations:
+      required: true
+  - type: textarea
+    id: rollback
+    attributes:
+      label: Rollback
+      description: Explain how to reverse the change, or write N/A for a read-only task.
+    validations:
+      required: true
